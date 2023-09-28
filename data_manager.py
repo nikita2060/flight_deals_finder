@@ -14,6 +14,8 @@ class DataManager:
 
         self.sheet_data = flight_data_dict["prices"]
 
-    def put_iata_codes(self):
+    def update_sheet(self):
         sheet_url = "https://api.sheety.co/0d3b0683421d5adbc5a069b4803ee004/flightDeals/prices/1"
+        response = requests.put(url=sheet_url)
+        print(response.text)
 
